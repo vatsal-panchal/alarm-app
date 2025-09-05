@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alarm Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="phone">
+    <h1 id="status">All alarms are off</h1>
+
+    <!-- Alarm Create -->
+    <div class="create-alarm">
+      <input type="time" id="newAlarmTime">
+      <button onclick="addAlarm()">+ Add</button>
+    </div>
+
+    <!-- Alarm List -->
+    <div class="alarm-list" id="alarmList">
+      <div class="alarm">
+        <span>4:30 am</span>
+        <label class="switch">
+          <input type="checkbox" onchange="toggleAlarm(this, '4:30 am')">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="alarm">
+        <span>8:00 am</span>
+        <label class="switch">
+          <input type="checkbox" onchange="toggleAlarm(this, '8:00 am')">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
